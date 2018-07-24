@@ -15,6 +15,9 @@ alias cmk="make clean;make"
 
 alias gitst="git status"
 alias gitlog="git log --name-status"
+alias gitck="git checkout"
+alias gitsl="git stash list"
+alias gitsp="git stash pop"
 
 
 export PYTHONPATH=:/usr/local/python3/lib/python3.6/site-packages$PYTHONPATH
