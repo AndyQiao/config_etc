@@ -1,0 +1,12 @@
+server{
+	listen 80;
+	server_name www.test.com;
+
+	location /test {
+		default_type text/plain;
+		set $args "$args#new";
+
+		#echo "ori_arg: $ori_arg";
+		echo "args: $args";
+	}
+}

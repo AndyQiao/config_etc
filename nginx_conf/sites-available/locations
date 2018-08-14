@@ -1,0 +1,28 @@
+    location /static { 
+        alias /home/andy/sites/django_blog_andy/blog_project/static/; 
+    } 
+ 
+    location /robots.txt{ 
+        alias /home/andy/sites/django_blog_andy/blog_project/static/robots.txt; 
+    } 
+ 
+    location /sitemap.xml{ 
+        alias /home/andy/sites/django_blog_andy/blog_project/static/sitemap.xml; 
+    } 
+ 
+ 
+    location /googleaff3ea29bfbe2042.html{ 
+        alias /home/andy/sites/django_blog_andy/blog_project/static/googleaff3ea29bfbe2042.html; 
+    } 
+ 
+    location /baidu_verify_IiXp2XTkSP.html{ 
+        alias /home/andy/sites/django_blog_andy/blog_project/static/baidu_verify_IiXp2XTkSP.html; 
+    } 
+ 
+    location /1e7b2eb9f451fa10506a15759e058209.txt{ 
+        alias /home/andy/sites/django_blog_andy/blog_project/static/1e7b2eb9f451fa10506a15759e058209.txt; 
+    } 
+ 
+    location /sogousiteverification.txt{ 
+        alias /home/andy/sites/django_blog_andy/blog_project/static/sogousiteverification.txt; 
+    } 
