@@ -1,0 +1,22 @@
+#!/usr/bin/expect
+set host [lindex $argv 0]
+
+set TERMSERV [JUMP_MACHINE_IP] 
+set USER [JUMP_MACHINE_USER]
+set PASSWORD [JUMP_MACHINE_PASSWORD]
+set UATUN [DEST_MACHINE_USER]
+set UATPWD [DEST_MACHINE_PASSWORD]
+
+# 登录跳板机
+spawn ssh -l $USER $TERMSERV
+expect {
+        "yes/no" {send "yes\r";exp_continue;}
+         "*password:*" { send "$PASSWORD\r" }
+        }
+# 登录内网
+expect "*$UATUN@*" {send "ssh -l $UATUN $host\r"}
+expect {
+        "yes/no" {send "yes\r";exp_continue;}
+        "*password:*" { send "$UATPWD\r" }
+        }
+interact
