@@ -1,0 +1,28 @@
+############################## alias #################################################
+# git
+alias gitst='git status'
+alias gitck='git checkout'
+alias gitsl='git stash list'
+alias gitsp='git stash pop'
+alias gitfe='git fetch --all'
+alias gitup='git fetch upstream; git log upstream/master ^master; git merge upstream/master'
+alias gitupm='git fetch upstream; git log upstream/micromsg.7.0.7 ^master; git merge upstream/micromsg.7.0.7'
+alias gitbr='git branch'
+alias gitba='git branch -a'
+alias gitck='git checkout'
+alias gitsl='git stash list'
+alias gitsp='git stash pop'
+
+# Linux
+alias nfind='find . -type f -name'
+alias sfind='find . -type f -name "*"|xargs grep'
+
+
+############################# tools #################################################
+#
+# autojump
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+# tmux支持256真彩
+export TERM=xterm-256color
+
